@@ -12,11 +12,11 @@ public class Main {
                 new Produto(3, "Notebook Gamer G15", "DELL", "5530", 150)
         );
 
-        var exportadorPadrao = ExportadorListaProduto.newInstance();
+        var exportadorPadrao = ExportadorListaProduto.newInstance("html");
         System.out.println("Lista de produtos em HTML\n");
         System.out.println(exportadorPadrao.exportar(produtos));
 
-        var exportadorMark = ExportadorListaProduto.newInstance();
+        var exportadorMark = ExportadorListaProduto.newInstance("md");
         System.out.println("Lista de produtos em Markdown\n");
         System.out.println(exportadorMark.exportar(produtos));
 

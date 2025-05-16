@@ -31,7 +31,8 @@ public class ExportadorListaMarkdown extends AbstractExportadorListaProduto{
     @Override
     public String fecharLinhaTitulos() {
         StringBuilder stringBuilder = new StringBuilder();
-        for (String titulo : TITULO_COLUNAS){
+        stringBuilder.append("|\n| ");
+        for (int i = 0; i < TITULO_COLUNAS.size(); i++) {
             stringBuilder.append("--- | ");
         }
         stringBuilder.append("\n");

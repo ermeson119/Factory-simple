@@ -13,15 +13,17 @@ public abstract class AbstractExportadorListaProduto implements ExportadorListaP
         builder.append(abrirLinha());
 
         TITULO_COLUNAS.stream().map(titulo -> abrirColuna(titulo) + fecharColuna()).forEach(builder::append);
+        builder.append(fecharLinha());
+//        builder.append(fecharLinhaTitulos());
 
         for (var produto : listaProdutos){
             builder.append(abrirLinha());
-            builder.append(abrirColuna(produto.getId())).append(fecharTabela());
-            builder.append(abrirColuna(produto.getDescricao())).append(fecharTabela());
-            builder.append(abrirColuna(produto.getMarca())).append(fecharTabela());
-            builder.append(abrirColuna(produto.getModelo())).append(fecharTabela());
-            builder.append(abrirColuna(produto.getEstoque())).append(fecharTabela());
-            builder.append(fecharTabela());
+            builder.append(abrirColuna(produto.getId())).append(fecharColuna());
+            builder.append(abrirColuna(produto.getDescricao())).append(fecharColuna());
+            builder.append(abrirColuna(produto.getMarca())).append(fecharColuna());
+            builder.append(abrirColuna(produto.getModelo())).append(fecharColuna());
+            builder.append(abrirColuna(produto.getEstoque())).append(fecharColuna());
+            builder.append(fecharLinha());
 
         }
 
