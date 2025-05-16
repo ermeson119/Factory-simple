@@ -8,8 +8,8 @@ public class Main {
 
         var produtos = List.of(
                 new Produto(1, "Ps5", "PlayStation®5", "CFI-2014B01X", 100),
-                new Produto(1, "Xbox Series S", "Microsoft", "EP2-00692", 110),
-                new Produto(1, "Notebook Gamer G15", "DELL", "5530", 150)
+                new Produto(2, "Xbox Series S", "Microsoft", "EP2-00692", 110),
+                new Produto(3, "Notebook Gamer G15", "DELL", "5530", 150)
         );
 
         var exportadorPadrao = ExportadorListaProduto.newInstance();
